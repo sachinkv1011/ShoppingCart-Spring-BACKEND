@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "userReg")
+@Table(name = "user")
 public class UserRegModel {
 
     @Id
@@ -14,22 +14,24 @@ public class UserRegModel {
     private int id;
     private String name;
     private String address;
-    private String phoneNo;
-    private String emailId;
+    private String phone;
+    private String email;
     private String password;
     private String confirmPassword;
+
 
     public UserRegModel() {
     }
 
-    public UserRegModel(int id, String name, String address, String phoneNo, String emailId, String password, String confirmPassword) {
+    public UserRegModel(int id, String name, String address, String phone, String email, String password,String confirmPassword) {
         this.id = id;
         this.name = name;
         this.address = address;
-        this.phoneNo = phoneNo;
-        this.emailId = emailId;
+        this.phone = phone;
+        this.email = email;
         this.password = password;
-        this.confirmPassword = confirmPassword;
+        this.confirmPassword=confirmPassword;
+
     }
 
     public int getId() {
@@ -56,20 +58,20 @@ public class UserRegModel {
         this.address = address;
     }
 
-    public String getPhoneNo() {
-        return phoneNo;
+    public String getPhone() {
+        return phone;
     }
 
     public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
+        this.phone = phone;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
